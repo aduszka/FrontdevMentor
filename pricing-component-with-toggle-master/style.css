@@ -1,0 +1,126 @@
+:root{
+--Very-Light-Grayish-Blue: rgb(246, 246, 254);
+--Light-Grayish-Blue: rgb(179, 181, 198);
+--Grayish-Blue: rgb(109, 112, 141);
+--Dark-Grayish-Blue: rgb(73, 76, 95);
+
+--ff: "Montserrat", serif;
+--fw: 700;
+
+--Linear-gradient: rgb(163, 168, 240);
+--Linear-gradient2:rgb(105, 111, 221);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+  height: 100vh;
+  font-family: "Montserrat", serif;
+  background: 
+  url('images/bg-top.svg') top right/ 400px 400px no-repeat,
+  url('images/bg-bottom.svg') bottom left / 400px 400px no-repeat;
+  background-color: var(--Very-Light-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#toggle-wrap{
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--Linear-gradient2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+}
+#toggle-switch{
+  background-color: var(--Very-Light-Grayish-Blue);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  transition: all .5s;
+  cursor: pointer;
+  margin-left: 4px;
+}
+#toggle-input:checked + #toggle-switch{
+  transform: translate(30px);
+}
+.cards-grid{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card{
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  height: 450px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(62, 62, 62, 0.058);
+}
+.card-center{
+  background:linear-gradient(135deg, var(--Linear-gradient), var(--Linear-gradient2));
+  border-radius: 10px;
+  height: 510px;
+}
+.line{
+  height:1px;
+  width: 80%;
+  background-color: var(--Very-Light-Grayish-Blue);
+  margin: 10px;
+}
+.benefits{
+  margin: 0px;
+}
+.benefits-center{
+  color: white;
+}
+.center{
+  color: white;
+}
+.cost-center{
+  color: white;
+}
+#basic-cost{
+  font-size: 46px;
+  font-weight: 700;
+}
+.cost{
+  font-size: 38px;
+  font-weight: 700;
+}
+.benefits-btn{
+  width: 80%;
+  background:linear-gradient(135deg, var(--Linear-gradient), var(--Linear-gradient2));
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 45px;
+}
+.benefits-btn-center{
+  background-color: var(--Very-Light-Grayish-Blue);
+  color: var(--Linear-gradient2);
+  border: none;
+  width: 80%;
+  border-radius: 5px;
+  height: 45px;
+}
+#toggle-input{
+  display: none;
+}

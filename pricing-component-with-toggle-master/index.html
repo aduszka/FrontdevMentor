@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <h1>Our Pricing</h1>
+  <div class="toggle-container">
+    <p>Annually</p>
+    <div id="toggle-wrap">
+      <label for="toggle-input">
+        <input type="checkbox"
+        id="toggle-input">        
+        <div id="toggle-switch"></div>
+      </label>
+    </div>
+    <p>Monthly</p>
+  </div>
+  
+  <div class="cards-grid">
+    <div class="card">
+      <h3>Basic</h3>
+      <div class="cost">$ <span id="basic-cost">199.99</span></div>
+      <div class="line"></div>
+      <p class="benefits">500 GB Storage</p>
+      <div class="line"></div>
+      <p class="benefits">2 Users Allowed</p>
+      <div class="line"></div>
+      <p class="benefits">Send up to 3 GB</p>
+      <div class="line"></div>
+      <button class="benefits-btn">Learn More</button>
+    </div>
+
+    <div class="card-center card">
+      <h3 class="center">Professional</h3>
+      <div class="cost cost-center">$ <span id="basic-cost1">249.99</span></div>
+      <div class="line-center line"></div>
+      <p class="benefits-center benefits">1TB Storage</p>
+      <div class="line"></div>
+      <p class="benefits-center benefits">5 Users Allowed</p>
+      <div class="line"></div>
+      <p class="benefits-center benefits">Send up to 10 GB</p>
+      <div class="line"></div>
+      <button class="benefits-btn-center">Learn More</button>
+    </div>
+
+    <div class="card">
+      <h3>Master</h3>
+      <div class="cost">$ <span id="basic-cost2">399.99</span></div>
+      <div class="line"></div>
+      <p class="benefits">2TB Storage</p>
+      <div class="line"></div>
+      <p class="benefits">10 Users Allowed</p>
+      <div class="line"></div>
+      <p class="benefits">Send up to 20 GB</p>
+      <div class="line"></div>
+      <button class="benefits-btn">Learn More</button>
+    </div>
+  </div>
+  <script>
+    myInput=document.getElementById("toggle-input");
+    myBasic=document.getElementById("basic-cost");
+    myBasic1=document.getElementById("basic-cost1");
+    myBasic2=document.getElementById("basic-cost2");
+
+    myInput.addEventListener("change", event =>{
+      if(event.target.checked){
+        myBasic.textContent = "19.99";
+      }
+      else{
+        myBasic.textContent = "199.99";
+      }
+    }
+    )
+    myInput.addEventListener("change", event =>{
+      if(event.target.checked){
+        myBasic1.textContent = "24.99";
+      }
+      else{
+        myBasic1.textContent = "249.99";
+      }
+    }
+    )
+    myInput.addEventListener("change", event =>{
+      if(event.target.checked){
+        myBasic2.textContent = "39.99";
+      }
+      else{
+        myBasic2.textContent = "399.99";
+      }
+    }
+    )
+  </script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Adriana Cybin</a>.
+  </div>
+</body>
+</html>
